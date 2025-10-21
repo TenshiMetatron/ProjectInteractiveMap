@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <header class="topbar">
+    <button id="menu-btn" class="menu-btn"><i class="fas fa-bars"></i></button>
+    <h1>Campus Dashboard</h1>
+    <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+  </header>
+
+  <aside id="sidebar" class="sidebar">
+    <nav>
+      <a href="#" id="home-tab" class="active"><i class="fas fa-home"></i> Home</a>
+      <a href="#" id="map-tab"><i class="fas fa-map"></i> Interactive Map</a>
+      <a href="#" id="feedback-tab"><i class="fas fa-comment-dots"></i> Feedback</a>
+    </nav>
+  </aside>
+
+  <div id="overlay"></div>
+
+  <main id="main-content">
+    <h2>Welcome to the Campus Dashboard</h2>
+    <p>This page shows total visitor count and access to the interactive map.</p>
+    <p><strong>Visitors:</strong> <span id="visitor-count">0</span></p>
+  </main>
+
+  <script defer src="script.js"></script>
+</body>
+</html>
