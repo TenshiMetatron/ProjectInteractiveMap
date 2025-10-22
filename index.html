@@ -3,38 +3,54 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Campus Dashboard</title>
+  <title>Campus Interactive Map</title>
   <link rel="stylesheet" href="style.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
+
+  <!-- ===== TOPBAR ===== -->
   <header class="topbar">
-    <button id="menu-btn" class="menu-btn"><i class="fas fa-bars"></i></button>
-    <h1>Campus Dashboard</h1>
-    <button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button>
+    <button id="menu-btn" class="menu-btn" aria-label="Toggle Menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <h1 class="site-title">Campus Dashboard</h1>
+    <button id="mode-toggle" class="mode-btn" aria-label="Toggle Dark Mode">
+      <i class="fas fa-moon"></i>
+    </button>
   </header>
 
+  <!-- ===== SIDEBAR ===== -->
   <aside id="sidebar" class="sidebar">
-    <nav>
-      <a href="#" id="home-tab" class="active"><i class="fas fa-home"></i> Home</a>
+    <nav class="sidebar-nav">
+      <a href="#" id="home-tab"><i class="fas fa-home"></i> Home</a>
       <a href="#" id="map-tab"><i class="fas fa-map"></i> Interactive Map</a>
-      <a href="#" id="feedback-tab"><i class="fas fa-comment-dots"></i> Feedback</a>
+      <a href="#" id="feedback-tab"><i class="fas fa-comment"></i> Feedback</a>
     </nav>
   </aside>
 
-  <div id="overlay"></div>
+  <!-- ===== OVERLAY ===== -->
+  <div id="overlay" class="overlay"></div>
 
-  <main id="main-content">
-    <h2>Welcome to the Campus Dashboard</h2>
-    <p>This page shows total visitor count and access to the interactive map.</p>
-    <p><strong>Visitors:</strong> <span id="visitor-count">0</span></p>
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main-content" class="main-content">
+    <section>
+      <h2>Welcome to the Campus Interactive Dashboard</h2>
+      <p>Explore the interactive campus map and share your feedback with us!</p>
+
+      <!-- Modern Visitor Tracker -->
+      <div class="visitor-box">
+        <i class="fas fa-user-group"></i>
+        <div class="visitor-text">
+          <p>Total Visitors</p>
+          <h3 id="count">Loading...</h3>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- IMPORTANT: Load JS at the END of body -->
   <script src="script.js"></script>
 </body>
 </html>
-
